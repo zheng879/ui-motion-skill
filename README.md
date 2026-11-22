@@ -1,6 +1,6 @@
 ﻿# UI/UX 动效交互 Skill
 
-[![version](https://img.shields.io/badge/version-0.46-blue?style=flat-square)](https://github.com/linyi-ui/ui-motion-skill/releases) [![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/linyi-ui/ui-motion-skill/blob/main/LICENSE) [![motions](https://img.shields.io/badge/动效库-206_个-orange?style=flat-square)](https://github.com/linyi-ui/ui-motion-skill/blob/main/skills/ui-motion/references/motions.md)
+[![version](https://img.shields.io/badge/version-0.47-blue?style=flat-square)](https://github.com/linyi-ui/ui-motion-skill/releases) [![license](https://img.shields.io/badge/license-MIT-green?style=flat-square)](https://github.com/linyi-ui/ui-motion-skill/blob/main/LICENSE) [![motions](https://img.shields.io/badge/动效库-206_个-orange?style=flat-square)](https://github.com/linyi-ui/ui-motion-skill/blob/main/skills/ui-motion/references/motions.md)
 
 给 AI 编码助手（Claude Code、Codex、Cursor 等）用的动效技能包。
 
@@ -88,6 +88,7 @@ npx skills add https://github.com/linyi-ui/ui-motion-skill
 | 第39期 | 4 个毛玻璃效果：毛玻璃浮层、毛玻璃底栏、毛玻璃放大镜、毛玻璃气泡 | [毛玻璃效果.md](prompts/毛玻璃效果.md) |
 | 第40期 | 6 个发帖动效（按原片复刻）：网格切换、点开大图、发帖面板、头像写备注、链接分享面板、发布成功彩带 | [发帖动效-原片复刻.md](prompts/发帖动效-原片复刻.md) |
 | 第41期 | 4 个通用动效（按原片复刻）：右滑完成、下拉新增、捏合返回、空状态形变 | [通用列表动效.md](prompts/通用列表动效.md) |
+| 第42期 | 3 个输入反馈动效（按原片复刻）：金额弹性放大、底部面板展开、验证码成功 | [输入反馈动效.md](prompts/输入反馈动效.md) |
 | 加餐 | 2 个弹出交互：按钮长出菜单、卡片展开详情 | [弹出交互.md](prompts/弹出交互.md) |
 | 加餐 | 4 个加载动效：AI 出图显影、图标扇形下载、视频缓冲、外卖接力进度 | [加载动效加餐.md](prompts/加载动效加餐.md) |
 
@@ -272,6 +273,10 @@ npx skills add https://github.com/linyi-ui/ui-motion-skill
 - ❌ 什么时候不用（避免 AI 用错场景）
 - 📝 对应的一句话提示词（复制即用）
 
+| 207 | 金额弹性放大 Amount Spring | 记账/转账里输入金额，每位数字都要有反馈 |
+| 208 | 底部面板展开 Sheet Spring | 迷你底部面板拖开成整页 |
+| 209 | 验证码成功 OTP Success | 验证码填完显示成功 |
+
 **完整动效库**：[motions.md](skills/ui-motion/references/motions.md)
 
 ---
@@ -310,6 +315,7 @@ AI 写完代码后会按检查清单逐条自检：
 - **v0.38**（2026-11-14）：第35期 · 6 个设置流程动效（开关联动展开、选项展开、档位横滑、数字步进、设置完成、主题切换），动效库扩充到 167 个，新增「开关和撑开必须同一拍、吸附步长要等于刻度间距、扩散半径按到最远角算」等 6 条经验。
 - **v0.41**（2026-11-18）：第38期 · 6 个阅读器动效（拖页角翻页、长按划线高亮、划词菜单、章节目录滑出、字号调节重排、合书收进书架），动效库扩充到 185 个，新增 prompts/阅读器动效.md。
 - **v0.42**（2026-11-18）：第39期 · 4 个毛玻璃效果（毛玻璃浮层、毛玻璃底栏、毛玻璃放大镜、毛玻璃气泡），动效库扩充到 189 个，新增「毛玻璃背后必须是实时模糊不能贴固定截图、两个圆融合要用外切轮廓而不是叠画、玻璃高光和反光缺一不可」等经验。
+- **v0.47**（2026-11-22）：第42期 · 3 个输入反馈动效（金额弹性放大 / 底部面板展开 / 验证码成功）。添加 prompts/输入反馈动效.md，motions 新增 207–209，场景判断表新增 3 行。
 - **v0.46**（2026-11-21）：第41期重做 · 四条提示词与界面细节全部重写（真实 App 级列表：到期时间/彩色标签/日期胶囊/底部统计；iOS 336px 完整键盘；目录 6 行带色点数量箭头；主菜单 7 项带图标；空状态图标 176px，相机/镜头/棒球/地球/四角星芒五形状 64 锚点插值，内部细节稳定时淡入）。动效库 206 个。
 - **v0.45**（2026-11-21）：第41期首版 · 4 个通用动效（右滑完成、下拉新增、捏合返回、空状态形变），动效库扩充到 206 个，新增 prompts/通用列表动效.md。
 - **v0.44**（2026-11-20）：第40期重做 · 6 个发帖动效全部按 60fps.design 原片逐帧复刻（网格切换、点开大图、发帖面板、头像写备注、链接分享面板、发布成功彩带），动效库扩充到 201 个，新增 prompts/发帖动效-原片复刻.md，替换 v0.43 里同名的旧六条（旧版是与原片机制不同的换场景版本）。
